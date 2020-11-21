@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+.container{
+width: 100vw;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+margin: 0;
+} 
+
+
+#note{
+	position: fixed;
+	right:3rem;
+	top: 120px;
+}
+
+#info, #nowPlaying{
+  font-family: monospace;
+  color: red;
+  background-color: black;
+  margin: 1rem;
+  padding: 2rem;
+  position: absolute;
+  border-radius: 50px;
+  border-style: solid;
+  z-index: 4;
+  box-shadow: 0 0 20px 5px red;
+
+}
+
+#nowPlaying{
+	right: 150px;
+	top: 90px;
+	width: 300px;
+	height: 100px;
+	padding: 1rem;
+}
+
+#heartChain{
+	position: fixed;
+	right: 3rem;
+	top: 220px;
+}
+
+#info{
+	right: 150px;
+	top: 4px;
+}
+
+#home{
+	position: absolute;
+	color: white;
+	font-family: monospace;
+	font-size: 2rem;
+	letter-spacing: 0.4rem;
+	transform: rotate(-45deg);
+	top: 20px;
+	opacity: 0;
+}
+
+#home:hover{
+	opacity: 1;
+	transition: 2s ease;
+}
+
+audio{
+	width: 200px;
+	height: 40px;
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+
+.question{
+	display: inline;
+	top: 5px;
+	right:3rem;
+	position: absolute;
+	background-color:transparent;
+	border-radius: 50%;
+	filter: drop-shadow(0 0 40px red);
+	cursor: pointer;
+	z-index: 2;
+	}
+
+	.hidden{
+	display: none;
+}
+
+#left{
+position: absolute;
+transform: rotate(0.5turn);
+z-index: 2;
+
+}

@@ -1,0 +1,259 @@
+
+/* code adapted from this tutorial: https://3dtransforms.desandro.com/perspective; */
+
+
+@font-face{
+	font-family: 'Norm';
+	src: url(../assets/fonts/Norm-Regular.otf);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+nav{
+	z-index: 4;
+	margin-top: 1rem;
+}
+
+.questionMark{
+	right: 2rem;
+	top: 10px;
+	position: fixed;
+}
+
+#note{
+	position: fixed;
+	right: 2rem;
+	top: 100px;
+}
+
+#heartChain{
+	position: fixed;
+	right: 2rem;
+	top: 200px;
+}
+
+#home{
+	position: absolute;
+	color: white;
+	font-family: monospace;
+	font-size: 2rem;
+	letter-spacing: 0.4rem;
+	transform: rotate(-45deg);
+	top: 20px;
+	opacity: 0;
+}
+
+#home:hover{
+	opacity: 1;
+	transition: 2s ease;
+}
+
+
+.questionMark:hover, #heartChain:hover,#note:hover{
+	transform: scale(1.5);
+}
+
+
+#nowPlaying, #info{
+  font-family: monospace;
+  color: #757AD1;
+  background-color: black;
+  position: absolute;
+  overflow-y: scroll;
+  border-radius: 50px;
+  border-style: solid;
+  z-index: 4;
+  box-shadow: 0 0 20px 5px purple;
+}
+
+#nowPlaying{
+  right:130px;
+  top: 90px;
+  width: 300px;
+  height: 100px;
+  padding: 1rem;
+
+}
+
+
+audio{
+	width: 200px;
+	height: 40px;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+}
+
+#info{
+  right:120px;
+  top: 4px;
+  width: 200px;
+  height: 80px;
+  padding: 1rem;
+
+}
+
+.hidden{
+	display: none;
+}
+
+#oracle{
+	filter: drop-shadow(0 0 20px #B6C144);
+}
+.computer{
+width: 250px;
+height: auto;
+z-index: -500;
+margin: 0 auto;
+}
+
+@keyframes changePerspective{
+0% {transform: perspective(100px);
+	}
+50%{transform: perspective(8000px);}
+
+75%{transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);}
+100%{transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);}
+
+}
+
+@keyframes text{
+	0% {opacity: 0};
+	100%{opacity: 1};
+
+}
+
+.scene{
+	width: 600px;
+	height: 600px;
+	perspective: 8000px;
+	/* the lower the number, the farther the vanishing point */
+	margin: 0 auto;
+	padding-top: 3rem;
+
+}
+
+.room{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	animation: changePerspective 16s ease-in-out;
+}
+
+.face{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+} 
+
+.top {
+transform: rotateX(90deg) translateZ(300px);
+background: #5E74C9;
+filter: opacity(0.5);
+
+}
+
+.bottom{
+	transform: rotateX(-90deg) translateZ(300px);
+	background:#5E74C9;
+	filter: opacity(0.5);
+
+}
+
+.left{
+background:#8BCC66;
+filter: opacity(0.5);
+transform:rotateY(-90deg) translateZ(300px);
+
+}
+
+.right{
+	transform:rotateY(90deg) translateZ(300px);
+background:#8BCC66;
+filter: opacity(0.5);
+
+}
+
+.back{
+	transform: rotateY(180deg) translateZ(300px);
+	background:green;
+	filter: opacity(0.7);
+
+}
+
+.question{
+	font-family: Norm;
+	font-size: 2rem;
+	color: yellow;
+	position: absolute;
+	top: 50%;
+	margin: 0 auto;
+	z-index: 500;
+	animation: text 18s ease-in-out;
+}
+
+#qmark{
+	font-family: monospace;
+	font-size: 3rem;
+}
+
+#yes, #maybe{
+	position: absolute;
+	padding: 1rem;
+	background-color: #8BCC66;
+	border-radius: 50%;
+	font-size: 1rem;
+	font-family: monospace;
+	animation: text 18s ease-in-out;
+}
+
+#yes{
+	left: 15rem;
+	top: 50%;
+}
+
+#maybe{
+	right:15rem;
+	top: 50%;
+}
+
+a{
+	text-decoration: none;
+	color: #757AD1;
+	cursor: pointer;
+}
+
+a:hover{
+	text-decoration: underline teal;
+}
+
+#no:hover{
+text-decoration: none;
+filter: drop-shadow(1 1 2px purple);
+}
+#mario{
+	margin: 0;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

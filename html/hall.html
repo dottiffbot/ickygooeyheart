@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hallway</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/hall.css">
+	<link rel="icon" href="../assets/CANDLE.png">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $("#mark").click(function(e){
+        e.preventDefault();
+        $("#info").toggleClass('hidden');
+      });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function(){
+      $("#note").click(function(e){
+        e.preventDefault();
+        $("#nowPlaying").toggleClass('hidden');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<nav>
+  <div class="question"><img id="mark" src="../assets/question.png" width="70px"height="70px"></div>
+  <div id ="info" class="hidden">
+  there is someone waiting for you at the end of this hallway.... swipe right.
+  </div>
+
+<div class="back"><a href="./intro.html"><img id="left" src="../assets/arrow.png" width="100px" height="100px"></a>
+</div>
+
+<div id="note"><img src="../assets/note2.png" width="80px" height="80px"></div>
+<div id="nowPlaying" class="hidden">
+	<center>
+	<audio autoplay loop controls>
+	<source src="../assets/tune/NewSnow.mp3">
+</audio>
+	<p> new snow  - peter nothnagle</p>
+</center>
+</div>
+
+<div id="heartChain"><a href="../index.html"><img src="../assets/heart-chain.png" width="80px" height="80px"></a>
+<span id="home"><a href="../index.html">home</a></span></div>
+</nav>
+<!-- hall -->
+<div class="hall">
+
+<div class="clown"><a href="https://www.youtube.com/watch?v=NI6aOFI7hms" target="_blank"><img id="clown" src="../assets/clowninluv.png"></a></div>
+
+<div class="chair"><a href="../assets/9.JPG" target="_blank"><img id="chair"src="../assets/chair.png"></a></div>
+
+<div class="meat"><a href="./dreamhouse.html"><img id="meat" src="../assets/meat.png"></a></div>
+
+<div id="circle"><a href="../assets/vid/body.mp4" target="_blank"><img id="bodee"src="../assets/bodee.png"></a></div>
+
+<div class="chain"><a href="./closet.html"><img id="chain" src="../assets/chain_1.png"></a></div>
+<div class="adminReveal"></div>
+
+</div>
+
+
+</body>
+</html>

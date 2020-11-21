@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>on my computer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/onmycomputer.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1> I'm <br> So </h1>
+<div class="circle1"></div>
+
+<div class="phone-case">
+	<a href="./deadinthewater.html"><img id="phone" src="../assets/iphone.png"></a>
+
+	<video id="mirror" autoplay></video>
+
+</div>
+<script type="text/javascript">
+		var video = document.querySelector('video')
+		const options ={
+			video:true
+		}
+		navigator.mediaDevices.getUserMedia(options)
+		.then(function(stream){
+			video.srcObject = stream
+		})
+
+		.catch((error) => {
+			console.log("an error occured")
+		})
+	</script>
+
+	<div class="circle2"></div>
+
+	<h1>Alone On My Computer</h1>
+
+</body>
+</html>

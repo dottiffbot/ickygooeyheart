@@ -1,0 +1,173 @@
+@font-face{
+	font-family: 'Hadogenes';
+	src:url(../assets/fonts/Hadogenes-Regular.otf);
+}
+
+@font-face{
+	font-family: 'Apoc';
+	src:url(../assets/fonts/ApocTrial-Regular.otf);
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url(../assets/theocean.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    font-family: Apoc;
+	color: #C29F47;
+	letter-spacing: 0.25em;
+}
+
+.body-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+}
+
+
+header{
+	grid-area: 1/ 3 / 2 / 4;
+}
+.left{
+	grid-area: 1 /1 /2 /2;
+	display: inline;
+	transform: rotate(0.5turn);
+}
+
+.question{
+	grid-area: 1 / 2 / 2 / 3;
+	display: inline;
+	position: relative;
+}
+
+.message{
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	color: red;
+}
+
+.message:hover{
+	opacity: 1;
+	transition: 3s ease;
+
+}
+
+footer {
+	grid-area: 3 / 2 / 4 / 3;
+	margin-bottom: 2rem;
+}
+
+
+/* grid set up */
+
+.main-container{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-row-gap: 20px;
+	place-items: center;
+	margin: 0;
+	grid-area: 2 / 2 / 3 / 3;
+	/*width: 100vw;
+	height: 100vh; */
+
+}
+
+#v1{
+	grid-area: 1 / 3 / 2 / 4;
+	align-self: end;
+}
+#v2{
+	grid-area: 2 / 4/ 3 / 5;
+}
+#v3{
+	grid-area:  3 /4 / 4 /5;
+}
+
+.coffin-container{
+display: block;
+width: 500px;
+height: auto;
+grid-area: 2 / 3 / 3 / 4;
+grid-row-start: 2;
+grid-row-end: span 2;
+}
+
+#v4{
+	grid-area: 4 / 3 / 5 / 4;
+	align-self: start;
+}
+
+#v5{
+grid-area: 3 / 2 / 4 / 3;
+}
+#v6{
+grid-area: 2 / 2/ 3 / 3;
+}
+
+
+
+img{
+	display:inline-block;
+	max-width: 100%;
+}
+
+span{
+	display: inline-block;
+	margin: 0;
+	align-text: center;
+	text-shadow: 1px 1px 2px red, 0 0 1em #26736A, 0 0 0.2em orange;
+}
+
+#v1, #v2, #v3, #v4, #v5, #v6{
+	filter: blur(2px);
+	opacity: 0;
+	z-index: 3;
+	background-color: transparent;
+	cursor: help;
+
+}
+
+#v1:hover{
+	opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}
+#v2:hover{
+	opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}
+
+#v3:hover{
+	opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}
+
+#v4:hover{
+    opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}
+
+#v5:hover{
+    opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}
+
+#v6:hover{
+    opacity:1;
+	filter: blur(0);
+	transition: 3s ease;
+}

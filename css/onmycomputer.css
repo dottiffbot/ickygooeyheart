@@ -1,0 +1,64 @@
+*{
+	box-sizing: border-box;
+}
+
+@font-face{
+	font-family: 'Messapia-Bold';
+	src: url(../assets/fonts/Messapia-Bold.otf);
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: pink;
+	justify-content: center;
+
+}
+
+h1{
+	font-family: Messapia-Bold;
+	font-weight: regular;
+	font-size: 3rem;
+}
+
+.circle1{
+	height: 200px;
+	width: 400px;
+	top: 200px;
+	display: inline-block;
+	border-radius: 50%;
+	background: rgb(161,161,161);
+ background: radial-gradient(circle, rgba(161,161,161,1) 7%, rgba(200,234,237,1) 29%, rgba(235,142,142,1) 63%, rgba(206,179,214,1) 100%);
+
+}
+
+.circle2{
+	height: 400px;
+	width: 200px;
+	display: inline-block;
+	border-radius: 50%;
+	background: rgb(161,161,161);
+background: linear-gradient(180deg, rgba(161,161,161,1) 7%, rgba(242,242,242,1) 29%, rgba(73,69,134,1) 63%, rgba(0,255,203,1) 100%);
+}
+
+video {
+	border-radius: 50%;
+	height: 300px;
+	padding: 2rem;
+}
+
+#mirror{
+position: absolute;
+display: inline-block;
+left: 10rem;
+bottom: 12rem;
+}
+
+.phone-case{
+	position: relative;
+}
+#phone{
+	position:relative;
+	height: 700px;
+	margin: 0 auto;
+}
